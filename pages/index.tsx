@@ -4,8 +4,7 @@ import SearchBar from "../components/SearchBar/SearchBar";
 
 const Index: React.FC = () => (
   <Layout>
-    <h1>Welcome to the Home page!</h1>
-    <Calendar />
+    <h1>Beehive Golf</h1>
     <SearchBar />
   </Layout>
 );

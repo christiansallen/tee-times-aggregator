@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Navigation from "./Navigation";
+// import Navigation from "./Navigation";
 
 type Props = {
   children: React.ReactNode;
@@ -9,12 +9,12 @@ type Props = {
 const Layout: React.FC<Props> = ({ children /* Add other props here */ }) => (
   <>
     <Head>
-      <title>My App</title>
+      <title>Beehive Golf</title>
       {/*Add any other head elements here*/}
     </Head>
-    <header>
+    {/* <header>
       <Navigation />
-    </header>
+    </header> */}
     <main>{children}</main>
   </>
 );

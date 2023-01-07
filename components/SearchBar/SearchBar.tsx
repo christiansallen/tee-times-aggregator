@@ -1,5 +1,5 @@
 import { Form, FormGroup, Label, Input, Button } from "reactstrap";
-import "./search-bar.less";
+import styles from "./search-bar.module.css";
 
 type Props = {
   // Add any props for the component here
@@ -15,10 +15,13 @@ const SearchBar: React.FC<Props> = (props) => {
   const formattedDate = localDate.toISOString().substring(0, 10);
 
   return (
-    <Form>
+    <Form className={styles["form-container"]} inline>
       <FormGroup>
-        <Label for="location">Location</Label>
+        <Label for="location" className={styles["form-label"]}>
+          Location
+        </Label>
         <Input
+          className={styles["form-input"]}
           type="text"
           name="location"
           id="location"
@@ -26,17 +29,27 @@ const SearchBar: React.FC<Props> = (props) => {
         />
       </FormGroup>
       <FormGroup>
-        <Label for="date">Date</Label>
+        <Label for="date" className={styles["form-label"]}>
+          Date
+        </Label>
         <Input
           type="date"
           name="date"
           id="date"
           defaultValue={formattedDate}
+          className={styles["form-input"]}
         />{" "}
       </FormGroup>
       <FormGroup>
-        <Label for="players">Players</Label>
-        <Input type="select" name="players" id="players">
+        <Label for="players" className={styles["form-label"]}>
+          Players
+        </Label>
+        <Input
+          type="select"
+          name="players"
+          id="players"
+          className={styles["form-input"]}
+        >
           <option value="any">Any</option>
           <option value="1">1</option>
           <option value="2">2</option>
@@ -47,8 +60,15 @@ const SearchBar: React.FC<Props> = (props) => {
         </Input>
       </FormGroup>
       <FormGroup>
-        <Label for="holes">Holes</Label>
-        <Input type="select" name="holes" id="holes">
+        <Label for="holes" className={styles["form-label"]}>
+          Holes
+        </Label>
+        <Input
+          type="select"
+          name="holes"
+          id="holes"
+          className={styles["form-input"]}
+        >
           <option value="any">Any</option>
           <option value="9">9</option>
           <option value="18">18</option>
