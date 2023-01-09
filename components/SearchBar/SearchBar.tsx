@@ -16,7 +16,7 @@ const SearchBar: React.FC<Props> = (props) => {
 
   return (
     <Form className={styles["form-container"]} inline>
-      <FormGroup>
+      <FormGroup className={styles["form-group"]}>
         <Label for="location" className={styles["form-label"]}>
           Location
         </Label>
@@ -28,7 +28,7 @@ const SearchBar: React.FC<Props> = (props) => {
           placeholder="Enter a location"
         />
       </FormGroup>
-      <FormGroup>
+      <FormGroup className={styles["form-group"]}>
         <Label for="date" className={styles["form-label"]}>
           Date
         </Label>
@@ -40,7 +40,7 @@ const SearchBar: React.FC<Props> = (props) => {
           className={styles["form-input"]}
         />{" "}
       </FormGroup>
-      <FormGroup>
+      <FormGroup className={styles["form-group"]}>
         <Label for="players" className={styles["form-label"]}>
           Players
         </Label>
@@ -59,7 +59,7 @@ const SearchBar: React.FC<Props> = (props) => {
           <option value="6">6</option>
         </Input>
       </FormGroup>
-      <FormGroup>
+      <FormGroup className={styles["form-group"]}>
         <Label for="holes" className={styles["form-label"]}>
           Holes
         </Label>
@@ -74,7 +74,9 @@ const SearchBar: React.FC<Props> = (props) => {
           <option value="18">18</option>
         </Input>
       </FormGroup>
-      <Button>Search</Button>
+      <FormGroup className={styles["form-button"]}>
+        <Button>Search</Button>
+      </FormGroup>
     </Form>
   );
 };
